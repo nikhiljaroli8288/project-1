@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online store</title>
+    <style>
+        /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+/* Header */
+header {
+    border: 2px solid black;
+    background-color:rgb(30, 30, 28); /* Dark header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: #ff6600; /* Orange highlight color */
+}
+
+/* E-commerce Image */
+.ecommerce-image img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: 100px;
+}
+
+/* Product Grid */
+.product-grid {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+
+.product-category {
+    margin-bottom: 50px;
+}
+
+.product-category h3 {
+    color: #ff6600; /* Orange color for category title */
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.product-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #333; /* Darker background for products */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.product img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.product h4 {
+    font-size: 24px;
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+.product span {
+    font-size: 20px;
+    color: #ff6600;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Product Button Styles */
+.product button {
+    padding: 12px;
+    background-color:black;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 10px; /* Space between Add to Cart and Buy Now */
+}
+
+.product button:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
+
+.product .buy-now {
+    background-color: #28a745; /* Green color for Buy Now */
+    margin-top: 10px; /* Space between Add to Cart and Buy Now */
+}
+ </style>
+    
+</head>
+<body>
+    <header
+    <div class="logo">
+        <img src="innotech.jpeg" alt="InnoTechIndia Logo" width="280">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Checkout</a></li>
+        </ul>
+    </nav>
+   
+    <form style="color:black;">
+      <input type="text" id="text" name="text" placeholder="search..." required><br><br>
+    </form>
+</header>
+<!-- Main Section with Product Grid -->
+<section class="product-grid">
+    <h2>DISCOVER THE BEST LAPTOP TODAY !</h2>
+    
+      <!-- Laptops -->
+      <div class="product-category">
+        <h3>Laptops</h3>
+        <div class="product-row">
+            <div class="product">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.9r6_PB7SgpbabbrRuDQlPgAAAA&pid=Api&P=0&h=180" alt="MacBook Pro">
+                <h4>MacBook Pro</h4>
+                <p>High-performance laptop with M1 chip.</p>
+                <span>₹1,09,999</span>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.BCLBIGqjqsAzjOi7OHt6KQHaFj&pid=Api&P=0&h=180" alt="Dell XPS 13">
+                <h4>Dell XPS 13</h4>
+                <p>Ultrabook with stunning display.</p>
+                <span>₹74,999</span>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.5-dPn22msQqZH5CFxhobCwHaEu&pid=Api&P=0&h=180" alt="HP Spectre x360">
+                <h4>HP Spectre x360</h4>
+                <p>2-in-1 convertible laptop with powerful specs.</p>
+                <span>₹99,999</span>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.kY35kahjA60Vp4CFEmyqEwHaE8&pid=Api&P=0&h=180" alt="Asus ZenBook 13">
+                <h4>Asus ZenBook 13</h4>
+                <p>Compact laptop with a sleek design.</p>
+                <span>₹69,999</span>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.RbXiEBlo0TjEwllefkKUngHaEK&pid=Api&P=0&h=180" alt="Lenovo ThinkPad X1 Carbon">
+                <h4>Lenovo ThinkPad X1 Carbon</h4>
+                <p>Lightweight, high-end business laptop.</p>
+                <span>₹1,24,999</span>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    
+</section>
+</body>
+</html>
