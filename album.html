@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Changer</title>
+    <style>
+        /* Default Light Mode */
+        
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            background-color: white;
+            color: black;
+        }
+        
+        img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        input[type="text"],
+        input[type="color"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        #traffic-light {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .light {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+        
+        .light.active {
+            background-color: #f00;
+        }
+        
+        .yellow.active {
+            background-color: #ff0;
+        }
+        
+        .green.active {
+            background-color: #0f0;
+        }
+        /* Dark Mode */
+        
+        body.dark-mode {
+            background-color: #333;
+            color: white;
+        }
+        
+        body.dark-mode .light {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Click to Change Photo</h1>
+    <img id="photo" src="cat.avif" alt="Photo">
+    <br>
+    <button onclick="showPrevious()">Previous</button>
+    <button onclick="changePhoto()">Change Photo</button>
+
+    <h2>Change Background Color:</h2>
+    <input type="text" id="colorInput" placeholder="#ff5733" />
+    <button onclick="changeBackgroundColor()">Change Color</button>
+
+    <h3>Or Pick a Color:</h3>
+    <input type="color" id="colorPicker" onchange="changeBackgroundColorFromPicker()" />
+
+    <h3>Toggle Light/Dark Mode:</h3>
+    <button onclick="toggleLightDarkMode()">Toggle Light/Dark Mode</button>
+
+    <h3>Traffic Light:</h3>
+    <div id="traffic-light">
+        <div id="red" class="light"></div>
+        <div id="yellow" class="light yellow"></div>
+        <div id="green" class="light green"></div>
+    </div>
+
+    <script src="album.js"></script>
+</body>
+
+</html>
